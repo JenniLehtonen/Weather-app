@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/style.css'
+import {Container} from 'react-bootstrap';
+import Search from './components/Search'
+import CurrentWeather from './components/CurrentWeather'
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container fluid>
+       Weather app
+      </Container>
+      <Container fluid className="weather">
+        <Search />
+        <CurrentWeather />
+      </Container>
     </div>
   );
 }
