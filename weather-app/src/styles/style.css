@@ -1,23 +1,91 @@
+.pageContainer{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 5rem; /*Height of the footer*/
+}
 .container-fluid {
     background-color: rgba(163, 237, 255, 0.932);
     padding: 2rem 2rem;
-    text-align: start;
+    text-align: center;
 }
+/*Current weather and the search bar*/
 .weather.container-fluid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgba(163, 237, 255, 0.541);
     padding: 2rem;
 }
+
+/*The weather of today*/
 .currentWeather{
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 5px;
-    width: 100%;
+    width: 75%;
     background-color: white;
 }
-.col, .col-5{
-    background-color: rgba(163, 237, 255, 0.541);
+.col{
     border: 1px solid black;
 }
+#weatherMoreDetails{
+    height: 5rem;
+    margin-bottom: 5rem;
+}
+#weatherTemperature{
+    height: 30rem;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+#weatherTemperature .col{
+    padding-top: 10%;
+}
+
+/*Weather cards*/
+.weathercards.container-fluid .row{
+   display: flex;
+   flex-flow: row wrap;
+}
+.bg-dark.text-white.card{
+    overflow: hidden;
+    margin: 1rem;
+    
+ }
+
+/*Weather images*/
 .image{
-    width:3rem;
+    margin-right: 0.3rem;
+    margin-left: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/*Search bar*/
+.form-inline{
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+.mr-sm-2.form-control{
+    width: 70%;
+}
+
+/*Footer*/
+.footer{
+    height: 5rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(163, 237, 255, 0.932);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+.footer p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

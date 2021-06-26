@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import {Row, Col} from 'react-bootstrap';
-import logo from '../images/sunny.svg'
+import sunny from '../images/sunny.svg'
+import humidityImage from '../images/humidity.svg'
+import windImage from '../images/wind.svg'
+import cloudImage from '../images/cloud.svg'
 
 const CurrentWeather = () => {
     const [current, setCurrent] = useState([{
@@ -49,30 +52,29 @@ const CurrentWeather = () => {
         }         ]);
 
         var city = current[0].name;
-        var temperature = (current[0].main.temp-273.15).toString().slice(0,4);
-        var temperatureFeelsLike = (current[0].main.feels_like-273.15).toString().slice(0,4);
+        var temperature = (current[0].main.temp-273.15).toString().split(".")[0];
+        var temperatureFeelsLike = (current[0].main.feels_like-273.15).toString().split(".")[0];
         var humidity = current[0].main.humidity;
         var descriptionOfWeather = current[0].weather[0].description;
         var wind = current[0].wind.speed;
+        var clouds = current[0].clouds.all;
         
         console.log(current);
 
     return(
         <div className="currentWeather">
             <h1>Current weather in {city}</h1>
-        
-            <Row>
-                <Col>{temperature}<br />
+            <Row id="weatherMoreDetails">
+                <Col><img src={humidityImage} className="image" alt="humidity icon" />{humidity} % <img src={windImage} className="image" alt="wind icon" />{wind} m/s <img src={cloudImage} className="image" alt="cloud icon" />{clouds} %{temperatureFeelsLike}</Col>
+            </Row>
+            <Row id="weatherTemperature">
+                <Col>{temperature} °C<br />
                 {descriptionOfWeather}<br />
-                <img src={logo} className="image" />
-                </Col>
-                <Col xs={5}>{humidity}<br />
-                {wind}<br />
-                {temperatureFeelsLike}
+                <img src={sunny} className="image" alt="sun icon" />
                 </Col>
             </Row>
         </div>
-    )
+    );
 }
 
 export default CurrentWeather;

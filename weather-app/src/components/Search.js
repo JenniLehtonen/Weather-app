@@ -18,7 +18,7 @@ const Search = () => {
           <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e) => cityHandler(e)} />
           <Button variant="outline-info" onClick={searchCity} >Search</Button>
         </Form>
-    )
+    );
 }
 
 export default Search;
