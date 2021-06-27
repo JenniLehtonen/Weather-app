@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {Row, Col} from 'react-bootstrap';
 import sunny from '../images/sunny.svg'
 import humidityImage from '../images/humidity.svg'
 import windImage from '../images/wind.svg'
@@ -63,16 +62,17 @@ const CurrentWeather = () => {
 
     return(
         <div className="currentWeather">
-            <h1>Current weather in {city}</h1>
-            <Row id="weatherMoreDetails">
-                <Col><img src={humidityImage} className="image" alt="humidity icon" />{humidity} % <img src={windImage} className="image" alt="wind icon" />{wind} m/s <img src={cloudImage} className="image" alt="cloud icon" />{clouds} %{temperatureFeelsLike}</Col>
-            </Row>
-            <Row id="weatherTemperature">
-                <Col>{temperature} °C<br />
+            <h2>Current weather in {city}</h2>
+            <div id="weatherMoreDetails">
+              <div><img src={humidityImage} className="image" alt="humidity icon" />{humidity} %</div>
+              <div><img src={windImage} className="image" alt="wind icon" />{wind} m/s</div>
+              <div><img src={cloudImage} className="image" alt="cloud icon" />{clouds} %{temperatureFeelsLike}</div>
+            </div>
+            <div id="weatherTemperature">
+                {temperature} °C<br />
                 {descriptionOfWeather}<br />
                 <img src={sunny} className="image" alt="sun icon" />
-                </Col>
-            </Row>
+            </div>
         </div>
     );
 }

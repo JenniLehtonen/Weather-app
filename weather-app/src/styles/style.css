@@ -1,9 +1,20 @@
 .pageContainer{
+    width: 100%;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     position: relative;
     padding-bottom: 5rem; /*Height of the footer*/
+}
+/*Font sizes*/
+h1{
+    font-size: 5vw;
+}
+h2{
+    font-size: 3vw;
+}
+h3{
+    font-size: 2vw;
 }
 .container-fluid {
     background-color: rgba(163, 237, 255, 0.932);
@@ -31,10 +42,16 @@
     border: 1px solid black;
 }
 #weatherMoreDetails{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     height: 5rem;
     margin-bottom: 5rem;
 }
 #weatherTemperature{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     height: 30rem;
     padding-right: 10%;
     padding-left: 10%;
@@ -44,14 +61,17 @@
 }
 
 /*Weather cards*/
-.weathercards.container-fluid .row{
+#cardContainer{
    display: flex;
+   justify-content: center;
    flex-flow: row wrap;
+   flex-shrink: 1;
 }
 .bg-dark.text-white.card{
     overflow: hidden;
     margin: 1rem;
-    
+    width: 10vw;
+    height: 10vw;
  }
 
 /*Weather images*/
