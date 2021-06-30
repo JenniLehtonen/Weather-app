@@ -1,36 +1,40 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/style.css'
-import {Container, Form, FormControl, Button} from 'react-bootstrap';
-import backgroundImage from '../images/background.jpg'
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
-import {LinkContainer} from'react-router-bootstrap';
-
-import Footer from './Footer';
-import Weatherforecast from './Weatherforecast';
+import {Container, Form, FormControl} from 'react-bootstrap';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+import WeatherContext from '../contexts/weatherContext';
 
 const Frontpage = () => {
+  const weatherContext = useContext(WeatherContext);
   const [city, setCity] = useState('');
+  const [result, setResult] = useState({});
 
-    const cityHandler = (e) => {
-    e.preventDefault();
-    setCity(e.target.value);
-    };
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=`;
 
-    const searchCity = () => { 
-        console.log(city)
+    // Side effect
+    useEffect(() => {
+        fetch(url)
+        .then((res) => res.json())
+        .then((data) => setResult(data));
+    }, [url]);
+    console.log(result);
+
+    const searchWeather = () => { 
+        var test1 ="test1";
+        var test2 ="test2";
+        weatherContext.setWeatherVariables(test1, test2);
       };
+
   return (
-    <div className="pageContainer" style={{backgroundImage:`url(${backgroundImage})`,backgroundSize: "cover"}}>
       <Container fluid className="weather">
         
             <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e) => cityHandler(e)} />
-              <Link to="/weatherforecast" onClick={searchCity} >Search</Link>
+              <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e) => setCity(e.target.value)} />
+              <Link to="/weatherforecast" onClick={searchWeather} >Search</Link>
             </Form>
         
       </Container>
-    </div>
   );
 }
 

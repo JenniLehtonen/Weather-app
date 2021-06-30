@@ -8,8 +8,8 @@ const WeatherCard = () => {
 
     return(
         <div id="cardContainer">
-            {numbers.map((number) => (
-                <Card className="bg-dark text-white">
+            {numbers.map((number, index) => (
+                <Card className="bg-dark text-white" key={index}>
                     <Card.Img src={testImage} alt="Card image" />
                     <Card.ImgOverlay>
                         <Card.Title>{number}</Card.Title>
