@@ -69,8 +69,8 @@ const CurrentWeather = () => {
               <div><img src={cloudImage} className="image" alt="cloud icon" />{clouds} %{temperatureFeelsLike}</div>
             </div>
             <div id="weatherTemperature">
-                {temperature} °C<br />
-                {descriptionOfWeather}<br />
+                <h1>{temperature} °C</h1><br />
+                <h2>{descriptionOfWeather}</h2><br />
                 <img src={sunny} className="image" alt="sun icon" />
             </div>
         </div>

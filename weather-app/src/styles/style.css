@@ -38,23 +38,18 @@ h3{
     width: 75%;
     background-color: white;
 }
-.col{
-    border: 1px solid black;
-}
 #weatherMoreDetails{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 5rem;
-    margin-bottom: 5rem;
+    padding: 5rem 2rem 2rem 2rem;
 }
 #weatherTemperature{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    height: 30rem;
-    padding-right: 10%;
-    padding-left: 10%;
+    padding: 5rem 2rem 5rem 2rem;
 }
 #weatherTemperature .col{
     padding-top: 10%;
@@ -94,7 +89,6 @@ h3{
 
 /*Footer*/
 .footer{
-    height: 5rem;
     text-align: center;
     padding: 1rem;
     background-color: rgba(163, 237, 255, 0.932);

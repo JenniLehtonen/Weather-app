@@ -1,17 +1,15 @@
 import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/style.css'
+import '../styles/style.css'
 import {Container, Form, FormControl, Button} from 'react-bootstrap';
-import backgroundImage from './images/background.jpg'
+import backgroundImage from '../images/background.jpg'
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import {LinkContainer} from'react-router-bootstrap';
 
-import './App.css';
-import Frontpage from './components/Frontpage';
-import Footer from './components/Footer';
-import Weatherforecast from './components/Weatherforecast';
+import Footer from './Footer';
+import Weatherforecast from './Weatherforecast';
 
-const App = () => {
+const Frontpage = () => {
   const [city, setCity] = useState('');
 
     const cityHandler = (e) => {
@@ -24,21 +22,16 @@ const App = () => {
       };
   return (
     <div className="pageContainer" style={{backgroundImage:`url(${backgroundImage})`,backgroundSize: "cover"}}>
-      <Container fluid>
-       <h1>Weather app</h1>
+      <Container fluid className="weather">
+        
+            <Form inline>
+              <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e) => cityHandler(e)} />
+              <Link to="/weatherforecast" onClick={searchCity} >Search</Link>
+            </Form>
+        
       </Container>
-        <Router>
-            <Switch>
-            <Route exact path="/">
-                <Frontpage />
-              </Route>
-              <Route exact path="/weatherforecast">
-                <Weatherforecast />
-              </Route>
-            </Switch>
-        </Router>
     </div>
   );
 }
 
-export default App;
+export default Frontpage;
