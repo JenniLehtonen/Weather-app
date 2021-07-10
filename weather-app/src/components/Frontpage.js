@@ -4,36 +4,32 @@ import '../styles/style.css'
 import {Container, Form, FormControl} from 'react-bootstrap';
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 import WeatherContext from '../contexts/weatherContext';
+import search from '../images/search.svg'
 
 const Frontpage = () => {
   const weatherContext = useContext(WeatherContext);
   const [city, setCity] = useState('');
   const [result, setResult] = useState({});
 
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=`;
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&`;
 
-    // Side effect
-    useEffect(() => {
+    /*useEffect(() => { //Get data from openweathermap
         fetch(url)
         .then((res) => res.json())
         .then((data) => setResult(data));
     }, [url]);
-    console.log(result);
+    console.log(result);*/
 
-    const searchWeather = () => { 
-        var test1 ="test1";
-        var test2 ="test2";
-        weatherContext.setWeatherVariables(test1, test2);
+    const searchWeather = () => { //Send the picked results to context
+        weatherContext.setWeatherVariables(result.name, result.main.temp, result.main.feels_like, result.main.humidity, result.weather[0].description, result.wind.speed, result.clouds.all);
       };
 
   return (
       <Container fluid className="weather">
-        
             <Form inline>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e) => setCity(e.target.value)} />
-              <Link to="/weatherforecast" onClick={searchWeather} >Search</Link>
+              <Link to="/weatherforecast" onClick={searchWeather} ><img src={search} className="image" alt="search icon" /></Link>
             </Form>
-        
       </Container>
   );
 }

@@ -2,7 +2,6 @@ import React, {useCallback, useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.css'
 import {Container} from 'react-bootstrap';
-import backgroundImage from './images/background.jpg'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import './App.css';
@@ -20,22 +19,26 @@ const App = () => {
   const [clouds, setClouds] = useState('');
   const [wind, setWind] = useState('');
 
-  const setWeatherVariables = useCallback((city, temperature, /*temperatureFeelsLike, 
-    humidity, descriptionOfWeather, clouds, wind*/) => {
-    /*setCity(city);
+  const setWeatherVariables = useCallback((city, temperature, temperatureFeelsLike, 
+    humidity, descriptionOfWeather, wind, clouds) => {
+    setCity(city);
     setTemperature(temperature);
     setTemperatureFeelsLike(temperatureFeelsLike);
     setHumidity(humidity);
     setDescriptionOfWeather(descriptionOfWeather);
     setClouds(clouds);
-    setWind(wind);*/
-    console.log(city);
+    setWind(wind);
     console.log(temperature);
+    console.log(temperatureFeelsLike);
+    console.log(humidity);
+    console.log(descriptionOfWeather);
+    console.log(clouds);
+    console.log(wind);
   },[]);
 
 
   return (
-    <div className="pageContainer" style={{backgroundImage:`url(${backgroundImage})`,backgroundSize: "cover"}}>
+    <div className="pageContainer">
       <Container fluid>
        <h1>Weather app</h1>
       </Container>

@@ -9,13 +9,6 @@ const WeatherContext = React.createContext({
     descriptionOfWeather: null,
     clouds: null,
     wind: null, 
-    setCity: () => {},
-    setTemperature: () => {},
-    setTemperatureFeelsLike: () => {},
-    setHumidity: () => {},
-    setDescriptionOfWeather: () => {},
-    setClouds: () => {},
-    setWind: () => {},
     setWeatherVariables: () => {},
 });
 
