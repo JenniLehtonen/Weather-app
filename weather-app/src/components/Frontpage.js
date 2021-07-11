@@ -13,19 +13,21 @@ const Frontpage = () => {
 
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&`;
 
-    /*useEffect(() => { //Get data from openweathermap
+    useEffect(() => { //Get data from openweathermap
         fetch(url)
         .then((res) => res.json())
         .then((data) => setResult(data));
     }, [url]);
-    console.log(result);*/
+    console.log(result);
 
     const searchWeather = () => { //Send the picked results to context
         weatherContext.setWeatherVariables(result.name, result.main.temp, result.main.feels_like, result.main.humidity, result.weather[0].description, result.wind.speed, result.clouds.all);
-      };
+      }; //DO I NEED TEMPERATURE FEELS LIKE?
 
   return (
       <Container fluid className="weather">
+        <h4>Good afternoon,</h4>
+        <h4>search weather by writing a name of a city</h4><br />
             <Form inline>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e) => setCity(e.target.value)} />
               <Link to="/weatherforecast" onClick={searchWeather} ><img src={search} className="image" alt="search icon" /></Link>

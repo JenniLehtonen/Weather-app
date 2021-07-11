@@ -2,9 +2,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh;
     position: relative;
     padding-bottom: 5rem; /*Height of the footer*/
+    background-color: rgba(96, 174, 194, 0.904);
 }
 /*Font sizes*/
 h1{
@@ -17,40 +19,69 @@ h3{
     font-size: 2vw;
 }
 .container-fluid {
-    background-color: rgba(163, 237, 255, 0.932);
+    background-color: rgba(140, 229, 252, 0.897);
     padding: 2rem 2rem;
     text-align: center;
 }
-/*Current weather and the search bar*/
+/*Frontpage container for the search bar and texts*/
 .weather.container-fluid{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(163, 237, 255, 0.541);
+    background-color: white;
+    opacity: 0.92;
+    color: black;
     padding: 2rem;
+    border-radius: 10px;
+}
+
+/*Current weather and the search bar*/
+.weather2.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 2rem;
+}
+
+/*Frontpage search bar*/
+.mr-sm-2.form-control{
+    border: 1px solid black;
+    color: black;
 }
 
 /*The weather of today*/
 .currentWeather{
+    text-align: center;
     margin-top: 2rem;
     padding: 2rem;
     border-radius: 5px;
     width: 75%;
     background-color: white;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 #weatherMoreDetails{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 2rem 2rem;
+}
+#weatherMoreDetails img{
+    margin: 1rem;
 }
 #weatherTemperature{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 5rem 2rem 5rem 2rem;
+    padding: 3rem 2rem 5rem 2rem;
 }
 #weatherTemperature .col{
     padding-top: 10%;
@@ -82,7 +113,7 @@ h3{
 .form-inline{
     text-align: center;
     justify-content: center;
-    width: 100%;
+    width: 90%;
 }
 .mr-sm-2.form-control{
     width: 70%;

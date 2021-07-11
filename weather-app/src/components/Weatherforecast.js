@@ -8,7 +8,7 @@ import WeatherCard from './WeatherCard'
 const Weatherforecast = () => {
   return (
       <>
-      <Container fluid className="weather">
+      <Container className="weather2">
         <Search />
         <CurrentWeather />
       </Container>

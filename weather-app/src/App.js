@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.css'
 import {Container} from 'react-bootstrap';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import backgroundImage from './images/backgroundImage.jpg';
 
 import './App.css';
 import Frontpage from './components/Frontpage';
@@ -38,9 +39,11 @@ const App = () => {
 
 
   return (
-    <div className="pageContainer">
+    <div className="pageContainer" style={{ 
+      backgroundImage: `url(${backgroundImage}`, backgroundRepeat: "no-repeat", backgroundSize: "cover" 
+    }}>
       <Container fluid>
-       <h1>Weather app</h1>
+       <h1>Weather forecast</h1>
       </Container>
       <WeatherContext.Provider value={{setWeatherVariables:setWeatherVariables,  
       city:city, temperature:temperature, temperatureFeelsLike:temperatureFeelsLike, 
