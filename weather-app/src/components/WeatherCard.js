@@ -1,21 +1,19 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
-import testImage from '../images/testImage.jpg'
+import sunny from '../images/sunny.svg' 
 
 const WeatherCard = () => {
-    const numbers = ["1", "2", "3", "4", "5"];
-
+    const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
     return(
         <div id="cardContainer">
-            {numbers.map((number, index) => (
+            {weekdays.map((day, index) => (
                 <Card className="bg-dark text-white" key={index}>
-                    <Card.Img src={testImage} alt="Card image" />
+                    <Card.Img src={sunny} alt="Card image" />
                     <Card.ImgOverlay>
-                        <Card.Title>{number}</Card.Title>
+                        <Card.Title>{day}</Card.Title>
                         <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content.
+                        This is weather
                         </Card.Text>
                     </Card.ImgOverlay>
                 </Card>

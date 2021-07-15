@@ -1,12 +1,12 @@
-.pageContainer{
+.contentContainer{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    min-height: 75vh;
     position: relative;
-    padding-bottom: 5rem; /*Height of the footer*/
-    background-color: rgba(96, 174, 194, 0.904);
 }
 /*Font sizes*/
 h1{
@@ -18,8 +18,25 @@ h2{
 h3{
     font-size: 2vw;
 }
+/*Placeholder colors*/
+::placeholder{
+    color: rgb(39, 39, 39) !important;
+    font-size: 1.2rem;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(39, 39, 39) !important;
+    font-size: 1.2rem;
+}
+::-webkit-input-placeholder { /* Edge */
+    color: rgb(39, 39, 39) !important;
+    font-size: 1.2rem;
+}
+
+
 .container-fluid {
-    background-color: rgba(140, 229, 252, 0.897);
+    background-color: rgb(143,172,204);
+    color: white;
+    opacity: 0.9;
     padding: 2rem 2rem;
     text-align: center;
 }
@@ -30,15 +47,24 @@ h3{
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
     opacity: 0.92;
     color: black;
-    padding: 2rem;
     border-radius: 10px;
+}
+
+/*Frontpage search bar*/
+.mr-sm-2.form-control{
+    border: 1px solid black;
+    color: black;
 }
 
 /*Current weather and the search bar*/
@@ -50,14 +76,11 @@ h3{
     padding: 2rem;
 }
 
-/*Frontpage search bar*/
-.mr-sm-2.form-control{
-    border: 1px solid black;
-    color: black;
-}
-
 /*The weather of today*/
 .currentWeather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-top: 2rem;
     padding: 2rem;
@@ -88,17 +111,26 @@ h3{
 }
 
 /*Weather cards*/
+.weathercards.container-fluid{
+    background-color: white;
+}
 #cardContainer{
+   background-color: white;
    display: flex;
    justify-content: center;
    flex-flow: row wrap;
    flex-shrink: 1;
+}
+.card-img{
+    background-color: white;
+    
 }
 .bg-dark.text-white.card{
     overflow: hidden;
     margin: 1rem;
     width: 10vw;
     height: 10vw;
+    border: none;
  }
 
 /*Weather images*/
@@ -107,6 +139,12 @@ h3{
     margin-left: 0.5rem;
     width: 2.5rem;
     height: 2.5rem;
+}
+.currentWeatherImage{
+    margin-right: 0.3rem;
+    margin-left: 0.5rem;
+    width: 10rem;
+    height: 10rem;
 }
 
 /*Search bar*/
@@ -127,17 +165,16 @@ h3{
 
 /*Footer*/
 .footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
     text-align: center;
     padding: 1rem;
-    background-color: rgba(163, 237, 255, 0.932);
-    position: absolute;
+    background-color: rgb(143,172,204);
+    opacity: 0.9;
+    color: white;
+    position: bottom;
     bottom: 0;
     width: 100%;
   }
-.footer p{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}

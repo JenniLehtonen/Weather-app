@@ -26,10 +26,9 @@ const Frontpage = () => {
 
   return (
       <Container fluid className="weather">
-        <h4>Good afternoon,</h4>
-        <h4>search weather by writing a name of a city</h4><br />
+        <h4>Let's find some weather info</h4><br />
             <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e) => setCity(e.target.value)} />
+              <FormControl type="text" placeholder="Search for a city" className="mr-sm-2" onChange={(e) => setCity(e.target.value)} />
               <Link to="/weatherforecast" onClick={searchWeather} ><img src={search} className="image" alt="search icon" /></Link>
             </Form>
       </Container>

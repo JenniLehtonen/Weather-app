@@ -24,7 +24,7 @@ const Search = () => {
   
     return(
       <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={(e) => setCity(e.target.value)} />
+      <FormControl type="text" placeholder="Search for a city" className="mr-sm-2" onChange={(e) => setCity(e.target.value)} />
       <Button onClick={searchWeather}><img src={search} className="image" alt="search icon" /></Button>
     </Form>
     );

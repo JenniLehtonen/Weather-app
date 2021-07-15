@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/style.css'
 import {Container} from 'react-bootstrap';
-import Search from './Search'
 import CurrentWeather from './CurrentWeather'
 import WeatherCard from './WeatherCard'
 
@@ -9,7 +8,6 @@ const Weatherforecast = () => {
   return (
       <>
       <Container className="weather2">
-        <Search />
         <CurrentWeather />
       </Container>
       <Container fluid className="weathercards">

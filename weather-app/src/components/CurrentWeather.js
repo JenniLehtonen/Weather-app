@@ -1,8 +1,10 @@
 import React, {useContext} from 'react';
-import sunny from '../images/sunny.svg'
-import humidityImage from '../images/humidity.svg'
-import windImage from '../images/wind.svg'
-import cloudImage from '../images/cloud.svg'
+import Search from './Search';
+
+import sunny from '../images/sunny.svg';
+import humidityImage from '../images/humidity.svg';
+import windImage from '../images/wind.svg';
+import cloudImage from '../images/cloud.svg';
 
 import WeatherContext from '../contexts/weatherContext';
 
@@ -17,6 +19,7 @@ const CurrentWeather = () => {
 
     return(
         <div className="currentWeather">
+          <Search/>
             <div id="weatherMoreDetails">
               <h3><img src={humidityImage} className="image" alt="humidity icon" />{weatherContext.humidity} %</h3>
               <h3><img src={windImage} className="image" alt="wind icon" />{weatherContext.wind} m/s</h3>
@@ -26,7 +29,7 @@ const CurrentWeather = () => {
             <div id="weatherTemperature">
                 <h1>{temperature} °C</h1><br />
                 <h3>{weatherContext.descriptionOfWeather}</h3><br />
-                <img src={sunny} className="image" alt="sun icon" />
+                <img src={sunny} className="currentWeatherImage" alt="sun icon" />
             </div>
         </div>
     );
