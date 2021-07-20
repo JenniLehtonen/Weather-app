@@ -123,7 +123,15 @@ h3{
 }
 .card-img{
     background-color: white;
-    
+}
+.card-title{
+    color: black;
+}
+.card-text{
+    color: black;
+}
+.bg-dark{
+    background-color: white !important;
 }
 .bg-dark.text-white.card{
     overflow: hidden;

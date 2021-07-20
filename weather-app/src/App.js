@@ -15,30 +15,23 @@ import WeatherContext from "./contexts/weatherContext";
 const App = () => {
   const [city, setCity] = useState('');
   const [temperature, setTemperature] = useState('');
-  const [temperatureFeelsLike, setTemperatureFeelsLike] = useState('');
   const [humidity, setHumidity] = useState('');
   const [descriptionOfWeather, setDescriptionOfWeather] = useState('');
+  const [icon, setIcon] = useState('');
   const [clouds, setClouds] = useState('');
   const [wind, setWind] = useState('');
   const [every8th, setEvery8th] = useState({});
 
-  const setWeatherVariables = useCallback((city, temperature, temperatureFeelsLike, 
-    humidity, descriptionOfWeather, wind, clouds, every8th) => {
+  const setWeatherVariables = useCallback((city, temperature, 
+    humidity, descriptionOfWeather, icon, wind, clouds, every8th) => {
     setCity(city);
     setTemperature(temperature);
-    setTemperatureFeelsLike(temperatureFeelsLike);
     setHumidity(humidity);
     setDescriptionOfWeather(descriptionOfWeather);
+    setIcon(icon);
     setClouds(clouds);
     setWind(wind);
     setEvery8th(every8th);
-    console.log(temperature);
-    console.log(temperatureFeelsLike);
-    console.log(humidity);
-    console.log(descriptionOfWeather);
-    console.log(clouds);
-    console.log(wind);
-    console.log(every8th);
   },[]);
 
 
@@ -52,8 +45,8 @@ const App = () => {
         </Container>
         <div className="contentContainer">
           <WeatherContext.Provider value={{setWeatherVariables:setWeatherVariables,  
-          city:city, temperature:temperature, temperatureFeelsLike:temperatureFeelsLike, 
-          humidity:humidity, descriptionOfWeather:descriptionOfWeather, clouds:clouds, wind:wind, every8th:every8th}}>
+          city:city, temperature:temperature, humidity:humidity, descriptionOfWeather:descriptionOfWeather, 
+          icon:icon, clouds:clouds, wind:wind, every8th:every8th}}>
               <Router>
                   <Switch>
                   <Route exact path="/">

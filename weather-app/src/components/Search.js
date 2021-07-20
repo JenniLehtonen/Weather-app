@@ -8,7 +8,7 @@ const Search = () => {
   const [city, setCity] = useState('');
   const [result, setResult] = useState({});
 
-  const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&`;
+  const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&`;
 
   
   useEffect(() => { //Get data from openweathermap
@@ -16,13 +16,12 @@ const Search = () => {
     .then((res) => res.json())
     .then((data) => setResult(data));
   }, [url]);
-  console.log(result);
 
   const searchWeather = () => { //Send the picked results to context
     const every_nth = (arr, nth) => arr.filter((e, i) => i % nth === nth - 1);
-        const every8th = every_nth(result.list, 8); //Get every 8th member of the list
+    const every8th = every_nth(result.list, 8); //Get every 8th member of the list
 
-        weatherContext.setWeatherVariables(result.city.name, result.list[0].main.temp, result.list[0].main.feels_like, result.list[0].main.humidity, result.list[0].weather[0].description, result.list[0].wind.speed, result.list[0].clouds.all, every8th);
+    weatherContext.setWeatherVariables(result.city.name, result.list[0].main.temp, result.list[0].main.humidity, result.list[0].weather[0].description, result.list[0].weather[0].icon, result.list[0].wind.speed, result.list[0].clouds.all, every8th);
   };
   
     return(

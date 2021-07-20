@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import Search from './Search';
 
-import sunny from '../images/sunny.svg';
 import humidityImage from '../images/humidity.svg';
 import windImage from '../images/wind.svg';
 import cloudImage from '../images/cloud.svg';
@@ -11,11 +10,8 @@ import WeatherContext from '../contexts/weatherContext';
 const CurrentWeather = () => {
   const weatherContext = useContext(WeatherContext);
 
-  //Change the temperatures from Kelvins to Celsius
+  //Round the temperature
   var temperature = Math.round(weatherContext.temperature);
-
-  //DO I NEED TEMPERATUREFEELSLIKE, CHECK ALSO FRONTPAGE COMMENT
-  var temperatureFeelsLike = (weatherContext.temperatureFeelsLike-273.15).toString().split(".")[0];
 
     return(
         <div className="currentWeather">
@@ -29,7 +25,7 @@ const CurrentWeather = () => {
             <div id="weatherTemperature">
                 <h1>{temperature} °C</h1><br />
                 <h3>{weatherContext.descriptionOfWeather}</h3><br />
-                <img src={sunny} className="currentWeatherImage" alt="sun icon" />
+                <img src={`http://openweathermap.org/img/wn/${weatherContext.icon}.png`} className="currentWeatherImage" alt="sun icon" />
             </div>
         </div>
     );
