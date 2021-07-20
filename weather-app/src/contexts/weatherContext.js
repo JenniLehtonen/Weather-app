@@ -8,7 +8,8 @@ const WeatherContext = React.createContext({
     humidity: null,
     descriptionOfWeather: null,
     clouds: null,
-    wind: null, 
+    wind: null,
+    every8th: null,
     setWeatherVariables: () => {},
 });
 

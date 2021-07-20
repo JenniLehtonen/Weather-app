@@ -12,7 +12,7 @@ const CurrentWeather = () => {
   const weatherContext = useContext(WeatherContext);
 
   //Change the temperatures from Kelvins to Celsius
-  var temperature = (weatherContext.temperature-273.15).toString().split(".")[0];
+  var temperature = Math.round(weatherContext.temperature);
 
   //DO I NEED TEMPERATUREFEELSLIKE, CHECK ALSO FRONTPAGE COMMENT
   var temperatureFeelsLike = (weatherContext.temperatureFeelsLike-273.15).toString().split(".")[0];
