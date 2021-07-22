@@ -1,27 +1,22 @@
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-.contentContainer{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}    
-/*Footer*/
-.footer{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    height: 15rem;
-    text-align: center;
-    padding: 1rem;
-    position: bottom;
-    bottom: 0;
-    width: 100%;
-  }
+@media only screen and (max-width: 1200px) {
+    /*Frontpage container for the search bar and texts*/
+    .weather.container{
+        padding-top: 0rem;
+    }
+    #cityContainer{
+        display: none;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .contentContainer{
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-    } 
+    .weather2.container{
+        width: 80%;
+    }
+    /*Frontpage container for the search bar and texts*/
+    .weather.container{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 }

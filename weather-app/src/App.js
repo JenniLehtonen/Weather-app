@@ -40,9 +40,9 @@ const App = () => {
     <div className="pageContainer" style={{ 
       backgroundImage: `url(${backgroundImage}`, backgroundRepeat: "no-repeat", backgroundSize: "cover" 
     }}>
-      <Container fluid>
+        <header>
         <h1>Weather forecast</h1>
-        </Container>
+        </header>
         <div className="contentContainer">
           <WeatherContext.Provider value={{setWeatherVariables:setWeatherVariables,  
           city:city, temperature:temperature, humidity:humidity, descriptionOfWeather:descriptionOfWeather, 

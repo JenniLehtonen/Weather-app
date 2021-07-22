@@ -1,13 +1,35 @@
+.pageContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .contentContainer{
-    margin-top: 2rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    text-align: center;
+    padding: 14px;
+   /* margin-top: 2rem;
     margin-bottom: 2rem;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 75vh;
-    position: relative;
+    align-items: center;*/
+    /*min-height: 75vh;
+    position: relative;*/
 }
+header{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    background-color: rgb(143,172,204);
+    color: white;
+    opacity: 0.9;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+
 /*Font sizes*/
 h1{
     font-size: 4vw;
@@ -33,32 +55,32 @@ h3{
 }
 
 
-.container-fluid {
-    background-color: rgb(143,172,204);
+.container {
     color: white;
     opacity: 0.9;
     padding: 2rem 2rem;
     text-align: center;
 }
 /*Frontpage container for the search bar and texts*/
-.weather.container-fluid{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: 25rem;
+.weather.container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-flow: row wrap;
+
+    margin-top:3rem;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+    width: 60%;
+
     background-color: white;
     opacity: 0.92;
     color: black;
     border-radius: 10px;
+}
+.weather.container h4{
+    margin-top: 4rem;
 }
 
 /*Frontpage search bar*/
@@ -66,6 +88,29 @@ h3{
     border: 1px solid black;
     color: black;
 }
+
+/*Frontpage container for the suggested cities*/
+#cityContainer{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    flex-shrink: 1;
+    margin-bottom: 3rem;
+ }
+#cityContainer button {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    background-color: transparent;
+}
+
+ #cityContainer img{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 10%;
+ }
 
 /*Current weather and the search bar*/
 .weather2.container{
@@ -111,7 +156,7 @@ h3{
 }
 
 /*Weather cards*/
-.weathercards.container-fluid{
+.weathercards.container{
     background-color: white;
 }
 #cardContainer{
@@ -172,17 +217,18 @@ h3{
 }
 
 /*Footer*/
-.footer{
+footer{
     display:flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 8rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     background-color: rgb(143,172,204);
     opacity: 0.9;
     color: white;
-    position: bottom;
-    bottom: 0;
     width: 100%;
   }
