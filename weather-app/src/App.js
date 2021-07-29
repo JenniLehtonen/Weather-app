@@ -17,17 +17,19 @@ const App = () => {
   const [temperature, setTemperature] = useState('');
   const [humidity, setHumidity] = useState('');
   const [descriptionOfWeather, setDescriptionOfWeather] = useState('');
+  const [main, setMain] = useState('');
   const [icon, setIcon] = useState('');
   const [clouds, setClouds] = useState('');
   const [wind, setWind] = useState('');
   const [every8th, setEvery8th] = useState({});
 
   const setWeatherVariables = useCallback((city, temperature, 
-    humidity, descriptionOfWeather, icon, wind, clouds, every8th) => {
+    humidity, descriptionOfWeather, main, icon, wind, clouds, every8th) => {
     setCity(city);
     setTemperature(temperature);
     setHumidity(humidity);
     setDescriptionOfWeather(descriptionOfWeather);
+    setMain(main)
     setIcon(icon);
     setClouds(clouds);
     setWind(wind);
@@ -45,7 +47,7 @@ const App = () => {
         </header>
         <div className="contentContainer">
           <WeatherContext.Provider value={{setWeatherVariables:setWeatherVariables,  
-          city:city, temperature:temperature, humidity:humidity, descriptionOfWeather:descriptionOfWeather, 
+          city:city, temperature:temperature, humidity:humidity, descriptionOfWeather:descriptionOfWeather, main:main, 
           icon:icon, clouds:clouds, wind:wind, every8th:every8th}}>
               <Router>
                   <Switch>

@@ -6,6 +6,7 @@ const WeatherContext = React.createContext({
     temperature: null,
     humidity: null,
     descriptionOfWeather: null,
+    main: null,
     clouds: null,
     wind: null,
     icon: null,

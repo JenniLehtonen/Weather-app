@@ -54,9 +54,7 @@ h3{
     font-size: 1.2rem;
 }
 
-
 .container {
-    color: white;
     opacity: 0.9;
     padding: 2rem 2rem;
     text-align: center;
@@ -132,7 +130,7 @@ h3{
     border-radius: 5px;
     width: 75%;
     background-color: white;
-    opacity: 0.9;
+    opacity: 1;
 }
 #weatherMoreDetails{
     display: flex;
@@ -158,6 +156,8 @@ h3{
 /*Weather cards*/
 .weathercards.container{
     background-color: white;
+    width: 80%;
+    border-radius: 5px;
 }
 #cardContainer{
    background-color: white;
@@ -166,25 +166,9 @@ h3{
    flex-flow: row wrap;
    flex-shrink: 1;
 }
-.card-img{
-    background-color: white;
+.futureForecast{
+    margin: 1rem 3rem;
 }
-.card-title{
-    color: black;
-}
-.card-text{
-    color: black;
-}
-.bg-dark{
-    background-color: white !important;
-}
-.bg-dark.text-white.card{
-    overflow: hidden;
-    margin: 1rem;
-    width: 10vw;
-    height: 10vw;
-    border: none;
- }
 
 /*Weather images*/
 .image{
@@ -198,6 +182,10 @@ h3{
     margin-left: 0.5rem;
     width: 10rem;
     height: 10rem;
+}
+.futureForecast img{
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 /*Search bar*/

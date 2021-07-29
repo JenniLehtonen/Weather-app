@@ -1,6 +1,14 @@
 import React, {useContext} from 'react';
 import {Card} from 'react-bootstrap';
 
+import thunderstorm from '../images/thunderstorm.svg';
+import drizzle from '../images/drizzle.svg';
+import rain from '../images/rain.svg';
+import snow from '../images/snow.svg';
+import mist from '../images/mist.png';
+import clear from '../images/clear.svg';
+import clouds from '../images/clouds.svg';
+
 import WeatherContext from '../contexts/weatherContext';
 
 const WeatherCard = () => {
@@ -24,25 +32,37 @@ const WeatherCard = () => {
         var day = getWeekdayName(dateArr[0], "en-EN");
         //Push the weekday name to weekdayArr
 		weekdayArr.push(day);
-        console.log(weekdayArr);
 	}
 
     for(let i=0;i<every8th.length;i++)
 	{
         every8th[i].weekDay=weekdayArr[i];
-	}
-    
-    console.log(every8th);
 
+        if(every8th[i].weather[0].main == "Rain"){
+            every8th[i].weatherIcon = rain
+          } else if (every8th[i].weather[0].main == "Clear"){
+            every8th[i].weatherIcon = clear
+          } else if (every8th[i].weather[0].main == "Thunderstorm"){
+            every8th[i].weatherIcon = thunderstorm
+          } else if (every8th[i].weather[0].main == "Drizzle"){
+            every8th[i].weatherIcon = drizzle
+          } else if (every8th[i].weather[0].main == "Snow"){
+            every8th[i].weatherIcon = snow
+          } else if (every8th[i].weather[0].main == "Clouds"){
+            every8th[i].weatherIcon = clouds
+          } else if (every8th[i].weather[0].main == "Mist" || every8th[i].weather[0].main =="Smoke" || every8th[i].weather[0].main == "Haze" || every8th[i].weather[0].main == "Dust" || every8th[i].weather[0].main == "Fog" || every8th[i].weather[0].main == "Sand" || every8th[i].weather[0].main == "Dust" || every8th[i].weather[0].main == "Ash" || every8th[i].weather[0].main == "Squall" || every8th[i].weather[0].main == "Tornado"){
+            every8th[i].weatherIcon = mist
+          }
+	}
 
     return(
         <div id="cardContainer">
             {every8th.map((item, index) => (
-                <Card className="bg-dark text-white" key={index}>
-                        <Card.Text>{item.weekDay}</Card.Text>
-                        <Card.Title>{Math.round(item.main.temp)}</Card.Title>
-                        <Card.Img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}.png`} />
-                </Card>
+                <div className="futureForecast" key={index}>
+                        <h3>{item.weekDay}</h3>
+                        <h4>{Math.round(item.main.temp)}</h4>
+                        <img src={item.weatherIcon} />
+                </div>
             ))}
         </div>
     );

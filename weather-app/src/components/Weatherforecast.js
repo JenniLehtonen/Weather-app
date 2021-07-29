@@ -10,7 +10,7 @@ const Weatherforecast = () => {
       <Container className="weather2">
         <CurrentWeather />
       </Container>
-      <Container fluid className="weathercards">
+      <Container className="weathercards">
         <WeatherCard />
       </Container>
       </>

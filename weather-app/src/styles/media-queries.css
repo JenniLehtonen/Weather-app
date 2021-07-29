@@ -1,22 +1,82 @@
-/* Extra small devices (phones, 600px and down) */
+/* Medium devices (large phones, laptops, max 1200px) */
 @media only screen and (max-width: 1200px) {
     /*Frontpage container for the search bar and texts*/
+    .weather.container{
+        width: 90%;
+    }
+    .weather.container h4{
+        font-size: 5vw;
+        margin-bottom: 1rem;
+    }
+    #popularCitiesH4{
+        display: none;
+    }
+    .weather.container{
+        padding-bottom: 3rem !important;
+    }
     .weather.container{
         padding-top: 0rem;
     }
     #cityContainer{
         display: none;
     }
+    /*Placeholder*/
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 2vw;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 2vw;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+    font-size: 2vw;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+    font-size: 2vw;
+    }
+
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .weather2.container{
-        width: 80%;
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    h2{
+        font-size: 6vw;
+    }
+    h1, h3{
+        font-size: 5vw;
+    }
+    /*Second page container*/
+    .currentWeather{
+        width:100%;
+    }
+    .currentWeatherImage{
+        width: 4rem;
+        height: 4rem;
+    }
+    .futureForecast img{
+        width: 2.5rem;
+        height: 2.5rem;
     }
     /*Frontpage container for the search bar and texts*/
     .weather.container{
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
+    /*Search button*/
+    .image{
+        width: 2rem;
+        height: 2rem;
+    }
+    /*Placeholder*/
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 4vw;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        font-size: 4vw;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        font-size: 4vw;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        font-size: 4vw;
+      }
 }
