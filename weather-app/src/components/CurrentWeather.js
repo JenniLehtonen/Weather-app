@@ -22,7 +22,7 @@ const CurrentWeather = () => {
   var temperature = Math.round(weatherContext.temperature);
 
   var image;
-
+  //Depending on the weather description, save different image to image variable
   if(weatherContext.main == "Rain"){
     image = rain
   } else if (weatherContext.main == "Clear"){

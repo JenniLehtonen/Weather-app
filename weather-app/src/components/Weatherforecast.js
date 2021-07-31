@@ -9,8 +9,6 @@ const Weatherforecast = () => {
       <>
       <Container className="weather2">
         <CurrentWeather />
-      </Container>
-      <Container className="weathercards">
         <WeatherCard />
       </Container>
       </>

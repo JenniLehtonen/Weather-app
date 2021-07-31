@@ -3,19 +3,15 @@
     /*Frontpage container for the search bar and texts*/
     .weather.container{
         width: 90%;
+        padding-bottom: 7rem !important;
     }
     .weather.container h4{
         font-size: 5vw;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
+    /*Hide the popular cities buttons from the frontpage*/
     #popularCitiesH4{
         display: none;
-    }
-    .weather.container{
-        padding-bottom: 3rem !important;
-    }
-    .weather.container{
-        padding-top: 0rem;
     }
     #cityContainer{
         display: none;
@@ -33,8 +29,9 @@
     :-moz-placeholder { /* Firefox 18- */
     font-size: 2vw;
     }
-
 }
+
+
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -44,14 +41,15 @@
     h1, h3{
         font-size: 5vw;
     }
-    /*Second page container*/
-    .currentWeather{
-        width:100%;
+    /*Weather of today*/
+    #cardContainer, .currentWeather{
+        width: 90%;
     }
     .currentWeatherImage{
         width: 4rem;
         height: 4rem;
     }
+    /*Weather of the next 5 days*/
     .futureForecast img{
         width: 2.5rem;
         height: 2.5rem;
@@ -59,7 +57,7 @@
     /*Frontpage container for the search bar and texts*/
     .weather.container{
         padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-bottom: 4rem !important;
     }
     /*Search button*/
     .image{
