@@ -78,3 +78,10 @@
         font-size: 4vw;
       }
 }
+
+/* Very small devices */
+@media only screen and (max-width: 280px) {
+  .weather .image, .currentWeather .image{
+      margin-top: 1rem;
+  }
+}
