@@ -15,8 +15,11 @@ The UI is created with **React Bootstrap** elements and with basic **HTML** elem
 #### Image and icon attribution
 The icons of the app are from **Bootstrap Icons** and **Flaticon**.
 The images of the app are from **Pexels** (New York photo by [Louis](https://www.pexels.com/@louis-965146), London photo by [Joanna Zduńczyk](https://www.pexels.com/@joanna-zdunczyk-18647846), Paris photo by [Eugene Dorosh](https://www.pexels.com/@eugene-dorosh-230277) and **Unsplash** (background photo by [Gary Ellis](https://unsplash.com/@garyellisphoto))
-<!--
+
 ## Pictures of the user interface
 
 This is the view when the user opens the application.
-![mainPage](documentationPictures/frontpage.png "The main page of the application") -->
+![frontpage](frontpage.png "frontpage")
+
+This is the view when the user sees the weather for the searched city
+![secondPage](secondPage.png "secondPage")
