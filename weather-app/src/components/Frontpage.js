@@ -15,7 +15,7 @@ const Frontpage = () => {
   const [city, setCity] = useState('');
   const [result, setResult] = useState({});
 
-  const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=`;
+  const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid`;
 
   useEffect(() => { //Get data from openweathermap
       fetch(url)

@@ -16,6 +16,11 @@
     #cityContainer{
         display: none;
     }
+    /*Search bar*/
+    .form-inline{
+        padding-top: 1rem;
+    }
+
     /*Placeholder*/
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-size: 2vw;
