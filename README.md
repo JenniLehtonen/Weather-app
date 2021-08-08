@@ -1,6 +1,8 @@
 # Weather-app
 With this application you can search for weather forecasts. The data of the application is fetched from OpenWeatherMap.
 
+[You can watch a video of the weather app here](https://jennilehtonen.github.io/Weather-app/video.html)
+
 |Table of contents|
 |:------------- |
 |1. [Technical solutions of the application](#Technical-solutions-of-the-application)|
