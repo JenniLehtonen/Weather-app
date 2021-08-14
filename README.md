@@ -13,6 +13,7 @@ Used technologies: **HTML, CSS, JavaScript and ReactJS**.
 
 ### Styling
 The UI is created with **React Bootstrap** elements and with basic **HTML** elements with **CSS** styling.
+This app is responsive.
 
 #### Image and icon attribution
 The icons of the app are from **Bootstrap Icons** and **Flaticon**.
@@ -23,5 +24,5 @@ The images of the app are from **Pexels** (New York photo by [Louis](https://www
 This is the view when the user opens the application.
 ![frontpage](frontpage.png "frontpage")
 
-This is the view when the user sees the weather for the searched city
+This is the view when the user sees the weather for the searched city.
 ![secondPage](secondPage.png "secondPage")
